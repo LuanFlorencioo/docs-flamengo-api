@@ -1,5 +1,6 @@
 import { geistVariables } from "@/fonts/geist";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={`${geistVariables} antialiased`}>{children}</body>
+		<html lang="en" suppressHydrationWarning>
+			<body className={`${geistVariables} antialiased`}>
+				<ThemeProvider>{children}</ThemeProvider>
+			</body>
 		</html>
 	);
 }
