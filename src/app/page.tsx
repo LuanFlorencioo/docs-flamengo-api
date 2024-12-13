@@ -15,6 +15,8 @@ export default function Home() {
 			<div className="w-full flex flex-wrap justify-center items-center gap-4">
 				<Button className="font-mono">Get Started</Button>
 
+				<p>Or</p>
+
 				<Button variant="outline" className="font-mono">
 					Documentation
 				</Button>
