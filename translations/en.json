@@ -1,0 +1,9 @@
+{
+	"RootPage": {
+		"title": "Hello World!",
+		"Button": {
+			"get-started": "Get Started",
+			"github": "View on Github"
+		}
+	}
+}
