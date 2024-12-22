@@ -1,3 +1,5 @@
+import { Aside } from "@/components/aside";
+import { Header } from "@/components/header";
 import { geistVariables } from "@/fonts/geist";
 import { isLocaleSupported } from "@/utils/isLocaleSupported";
 import type { Metadata } from "next";
@@ -31,7 +33,15 @@ export default async function RootLayout({
 		<html lang={locale} suppressHydrationWarning>
 			<body className={geistVariables}>
 				<NextIntlClientProvider messages={translations}>
-					<ThemeProvider>{children}</ThemeProvider>
+					<ThemeProvider>
+						<Header />
+
+						<div className="w-full max-w-[1200px] mx-auto flex relative">
+							<Aside />
+
+							{children}
+						</div>
+					</ThemeProvider>
 				</NextIntlClientProvider>
 			</body>
 		</html>
