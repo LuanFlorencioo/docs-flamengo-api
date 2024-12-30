@@ -1,9 +1,32 @@
 {
-	"RootPage": {
-		"title": "Hello World!",
-		"Button": {
-			"get-started": "Get Started",
-			"github": "View on Github"
+	"Home": {
+		"Introduction": {
+			"title": "Documentation",
+			"text_1": "Welcome to the FlamengoAPI documentation!",
+			"text_2": "This API was developed by a fan to provide comprehensive information about the club, including data on its history, squad, and achievements. Whether you are a developer building a Flamengo-related application or just a fan looking for structured information, this API is here to help."
+		},
+		"Content": {
+			"Features": {
+				"heading": "Features",
+				"list_unordered": {
+					"history": "History: Access detailed information about Flamengo's history since its foundation.",
+					"information": "Information: Data about the team and management.",
+					"current_squad": "Current Squad: Complete data on players and coaching staff.",
+					"achievements": "Achievements: Discover all the trophies won throughout history."
+				}
+			},
+			"Main_Features": {
+				"heading": "Main Features",
+				"text_1": "The API is designed to be easy to use, with routes organized by categories. The information is always up-to-date to ensure the best experience.",
+				"text_2": "To help you, this documentation was created precisely to explain how to use the API and how it works.",
+				"text_3": "You can access any page of the documentation through the navigation bar on the left side if you are using a computer, or through the dropdown menu at the top of the screen if you are using smaller devices."
+			}
+		},
+		"Footer": {
+			"Next_Page": {
+				"heading": "Next Step",
+				"text": "Click here to access more detailed information on how to use the API and integrate with your project"
+			}
 		}
 	}
 }
