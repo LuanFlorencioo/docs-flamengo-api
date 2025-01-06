@@ -1,3 +1,5 @@
+import { Text } from "@/components/typography/text";
+import { Title } from "@/components/typography/title";
 import { Link } from "@/i18n/routing";
 import { SquareArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -12,38 +14,30 @@ export default function Root() {
 	] as const;
 
 	return (
-		<main className="w-full min-h-screen py-32 px-8 flex flex-col gap-4 selection:bg-primary">
-			<h1 className="mb-2 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-				{t("Introduction.title")}
-			</h1>
+		<>
+			<Title>{t("Introduction.title")}</Title>
 
-			<span className="w-full h-1 bg-gradient-to-r from-primary via-background to-background rounded-sm animate-pulse" />
+			<Text>{t("Introduction.text_1")}</Text>
 
-			<p className="leading-7">{t("Introduction.text_1")}</p>
+			<Text>{t("Introduction.text_2")}</Text>
 
-			<p className="leading-7">{t("Introduction.text_2")}</p>
-
-			<h2 className="mt-8 mb-2 scroll-m-20 border-b pb-4 text-3xl font-semibold tracking-tight">
-				{t("Content.Features.heading")}
-			</h2>
+			<Title variant="h2">{t("Content.Features.heading")}</Title>
 
 			<ul className="ml-6 list-disc [&>li]:mt-2">
 				{listUnordered.map((key) => (
-					<li key={key} className="leading-7">
-						{t(`Content.Features.list_unordered.${key}`)}
+					<li key={key}>
+						<Text>{t(`Content.Features.list_unordered.${key}`)}</Text>
 					</li>
 				))}
 			</ul>
 
-			<h2 className="mt-8 mb-2 scroll-m-20 border-b pb-4 text-3xl font-semibold tracking-tight">
-				{t("Content.Main_Features.heading")}
-			</h2>
+			<Title variant="h2">{t("Content.Main_Features.heading")}</Title>
 
-			<p className="leading-7">{t("Content.Main_Features.text_1")}</p>
+			<Text>{t("Content.Main_Features.text_1")}</Text>
 
-			<p className="leading-7">{t("Content.Main_Features.text_2")}</p>
+			<Text>{t("Content.Main_Features.text_2")}</Text>
 
-			<p className="leading-7">{t("Content.Main_Features.text_3")}</p>
+			<Text>{t("Content.Main_Features.text_3")}</Text>
 
 			<footer className="w-full mt-8 flex justify-end">
 				<Link href="/introduction">
@@ -58,6 +52,6 @@ export default function Root() {
 					</div>
 				</Link>
 			</footer>
-		</main>
+		</>
 	);
 }
