@@ -1,5 +1,6 @@
 import { Aside } from "@/components/aside";
 import { Header } from "@/components/header";
+import { Main } from "@/components/main";
 import { geistVariables } from "@/fonts/geist";
 import { isLocaleSupported } from "@/utils/isLocaleSupported";
 import type { Metadata } from "next";
@@ -39,7 +40,7 @@ export default async function RootLayout({
 						<div className="w-full max-w-[1200px] mx-auto flex relative">
 							<Aside />
 
-							{children}
+							<Main>{children}</Main>
 						</div>
 					</ThemeProvider>
 				</NextIntlClientProvider>
