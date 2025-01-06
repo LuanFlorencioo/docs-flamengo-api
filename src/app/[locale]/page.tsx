@@ -1,7 +1,6 @@
+import { FooterCard } from "@/components/footer-card";
 import { Text } from "@/components/typography/text";
 import { Title } from "@/components/typography/title";
-import { Link } from "@/i18n/routing";
-import { SquareArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Root() {
@@ -39,19 +38,11 @@ export default function Root() {
 
 			<Text>{t("Content.Main_Features.text_3")}</Text>
 
-			<footer className="w-full mt-8 flex justify-end">
-				<Link href="/introduction">
-					<div className="w-full max-w-[400px] p-4 rounded-lg border-2 border-primary flex flex-col gap-2 cursor-pointer opacity-75 transition hover:opacity-100">
-						<h2 className="scroll-m-20 border-b pb-4 text-3xl text-primary font-semibold tracking-tight flex items-center justify-between">
-							{t("Footer.Next_Page.heading")} <SquareArrowUpRight size={24} />
-						</h2>
-
-						<p className="text-sm text-muted-foreground leading-7">
-							{t("Footer.Next_Page.text")}
-						</p>
-					</div>
-				</Link>
-			</footer>
+			<FooterCard
+				href="/introduction"
+				title={t("Footer.Next_Page.heading")}
+				text={t("Footer.Next_Page.text")}
+			/>
 		</>
 	);
 }
