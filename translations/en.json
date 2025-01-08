@@ -28,5 +28,38 @@
 				"text": "Click here to access more detailed information on how to use the API and integrate with your project"
 			}
 		}
+	},
+	"Introduction": {
+		"Introduction": {
+			"title": "Introduction",
+			"text": "This page will provide all the details you need to get started with the API. The API is designed to be accessible, with public routes and simple methods."
+		},
+		"Content": {
+			"Overview": {
+				"title": "Overview",
+				"list_unordered": {
+					"item_1": "Access Method: All routes use the GET method exclusively.",
+					"item_2": "API Key: No authentication or API key required. All routes are public.",
+					"item_3": "No Limits: There is no request limit. However, use it sparingly."
+				}
+			},
+			"Base_URL": {
+				"title": "Base URL",
+				"text": "If you make a request with just the base URL, a JSON containing information about the API will be returned, but don't worry, we will cover this route and what will be returned on the next page."
+			},
+			"Integration": {
+				"title": "Integration",
+				"text": "To integrate this API into your project:",
+				"list_unordered": {
+					"item_1": "Make sure your system can send GET requests.",
+					"item_2": "Use the base URL combined with the desired route.",
+					"item_3": "Manipulate the data returned in JSON format."
+				}
+			}
+		},
+		"Footer": {
+			"title": "First Route",
+			"text": "Let's start by making a request to the main route, the root route, which will return basic information and data about the API."
+		}
 	}
 }
