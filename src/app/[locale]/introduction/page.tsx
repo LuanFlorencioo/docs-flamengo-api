@@ -1,5 +1,6 @@
 import { BaseUrlCopy } from "@/components/base-url-copy";
 import { FooterCard } from "@/components/footer-card";
+import { Item, ListUnordered } from "@/components/list_unordered";
 import { Text } from "@/components/typography/text";
 import { Title } from "@/components/typography/title";
 import { apiRoutes } from "@/data/links";
@@ -25,13 +26,11 @@ export default function IntroductionPage() {
 
 			<Title variant="h2">{t("Content.Overview.title")}</Title>
 
-			<ul className="ml-6 list-disc [&>li]:mt-2">
+			<ListUnordered>
 				{itemsList.map((item) => (
-					<li key={item}>
-						<Text>{t(`Content.Overview.list_unordered.${item}`)}</Text>
-					</li>
+					<Item key={item}>{t(`Content.Overview.list_unordered.${item}`)}</Item>
 				))}
-			</ul>
+			</ListUnordered>
 
 			<Title variant="h2">{t("Content.Base_URL.title")}</Title>
 
@@ -43,13 +42,13 @@ export default function IntroductionPage() {
 
 			<Text>{t("Content.Integration.text")}</Text>
 
-			<ul className="ml-6 list-disc [&>li]:mt-2">
+			<ListUnordered>
 				{itemsList.map((item) => (
-					<li key={item}>
-						<Text>{t(`Content.Integration.list_unordered.${item}`)}</Text>
-					</li>
+					<Item key={item}>
+						{t(`Content.Integration.list_unordered.${item}`)}
+					</Item>
 				))}
-			</ul>
+			</ListUnordered>
 
 			<FooterCard
 				href={nextPage}

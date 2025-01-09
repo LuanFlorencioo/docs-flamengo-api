@@ -1,4 +1,5 @@
 import { FooterCard } from "@/components/footer-card";
+import { Item, ListUnordered } from "@/components/list_unordered";
 import { Text } from "@/components/typography/text";
 import { Title } from "@/components/typography/title";
 import { useTranslations } from "next-intl";
@@ -22,13 +23,11 @@ export default function Root() {
 
 			<Title variant="h2">{t("Content.Features.heading")}</Title>
 
-			<ul className="ml-6 list-disc [&>li]:mt-2">
+			<ListUnordered>
 				{listUnordered.map((key) => (
-					<li key={key}>
-						<Text>{t(`Content.Features.list_unordered.${key}`)}</Text>
-					</li>
+					<Item key={key}>{t(`Content.Features.list_unordered.${key}`)}</Item>
 				))}
-			</ul>
+			</ListUnordered>
 
 			<Title variant="h2">{t("Content.Main_Features.heading")}</Title>
 
